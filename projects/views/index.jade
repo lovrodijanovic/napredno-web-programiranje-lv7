@@ -1,0 +1,47 @@
+extends layout
+
+block content
+  div.project-header
+    div
+      h1 List of Projects
+    div.project-header
+      form(action='/projects/new', method='GET', style='padding-right: 10px;') 
+        button.add-project(type='submit') Add New Project
+      if isAuth
+        form(action='/auth/logout', method='GET') 
+          button.add-project(type='submit') Logout
+      else
+        form(action='/auth/login', method='GET')  
+          button.add-project(type='submit') Login
+  ul.projects-list
+    each project in projects
+      li.card
+        a(href=`/projects/${project._id}`)
+          div.project-header
+            h2= project.name + " - " + project.price + " €"
+            form(action=`/projects/${project._id}`, method='POST')
+              button.delete-project(type='submit') Delete
+          div.project-content
+            p= project.description
+            p Duration: #{project.start_date_formatted} - #{project.end_date_formatted}
+            p Finished jobs:
+            ul.finished-jobs
+              each job in project.finished_jobs
+                li= job.job_name
+  hr
+  h2 Projects that you manage
+    ul.projects-list
+      each project in projects
+        if project.manager == userId
+          li 
+            h2= project.name
+          
+  hr
+  h2 Projects that you work on
+    ul.projects-list
+      each project in projects
+        if userId
+          if project.team_members.some(member => member.toString() === userId.toString())
+            li 
+              h2= project.name
+  hr

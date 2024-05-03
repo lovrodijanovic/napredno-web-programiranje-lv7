@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    h1 Register Form
+    form(action="/auth/register" method="post")
+        .form-group 
+            label.form-label(for="userName") Username:
+            input.form-input(type="text" id="userName" name="userName" required)
+        .form-group 
+            label.form-label(for="password") Password:
+            input.form-input(type="password" id="password" name="password" required)
+        .form-group 
+            label.form-label(for="confirmPassword") Confirm Password:
+            input.form-input(type="password" id="confirmPassword" name="confirmPassword" required)
+        .project-header
+            a.form-submit(href="/auth/login") Login
+            input.form-submit(type="submit", value="Register") 

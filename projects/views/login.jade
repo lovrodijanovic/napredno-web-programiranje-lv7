@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    h1 Login Form
+    form(action="/auth/login" method="post")
+        .form-group 
+            label.form-label(for="userName") Username:
+            input.form-input(type="text" id="userName" name="userName" required)
+        .form-group 
+            label.form-label(for="password") Password:
+            input.form-input(type="password" id="password" name="password" required)
+        .project-header
+            a.form-submit(href="/auth/register") Register
+            input.form-submit(type="submit", value="Login") 

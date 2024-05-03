@@ -1,0 +1,130 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00b7ff;
+}
+
+.projects-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pd-3 {
+  padding: 3%;
+}
+
+.delete-project {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-project:hover {
+  background-color: #e60000;
+}
+
+.add-project {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-project:hover {
+  background-color: #007000;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.finished-jobs {
+  margin-top: 5px;
+}
+
+.finished-jobs li {
+  margin-bottom: 3px;
+}
+
+/*new*/
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-textarea {
+  height: 100px;
+}
+
+.form-submit {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+.form-submit:hover {
+  background-color: #45a049;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.form-option-select {
+  appearance: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  width: 100%;
+}
+
+.form-option-select option {
+  padding: 8px 16px;
+}
